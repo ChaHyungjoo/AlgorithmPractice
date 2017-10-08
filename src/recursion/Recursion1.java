@@ -55,7 +55,18 @@ public class Recursion1 {
 		
 	}
 	
-	
+	//최대공약수 구하기(유클리드 호제법)
+	static int gcd(int m, int n) {
+		/*System.out.println(m);
+		System.out.println(n);
+		System.out.println("************");*/
+		
+		if(n==0)	//0은 어떤수와 곱해도 0이므로 사실상 0의 약수는 모든 자연수이다
+			return m;
+		else
+			return gcd(n, m%n);
+		
+	}
 	
 	
 	public static void main(String[] args) {
@@ -83,6 +94,16 @@ public class Recursion1 {
 		int result4 = Recursion1.fibonacci(5);
 		System.out.println(result4);
 		System.out.println("=============================");
+		
+		/*==== 최대공약수 구하기(유클리드 호제법) =========================================================*/
+		int result5 = Recursion1.gcd(12, 9);
+		System.out.println(result5);
+		System.out.println("=============================");
+		
+		
+		
+		
+		
 		
 	}
 
