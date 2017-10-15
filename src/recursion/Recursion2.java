@@ -36,6 +36,47 @@ public class Recursion2 {
 		
 	}
 	
+	//¼øÂ÷Å½»ö1 (¾Õ¿¡¼­ºÎÅÍ Å½»ö)
+	static int search(int data[], int begin, int end, int target) {
+		
+		if(begin>end)
+			return -1;
+		else if(data[begin]==target)
+			return begin;
+		else
+			return search(data, begin+1, end, target);
+	}
+	
+	//¼øÂ÷Å½»ö2 (µÚ¿¡¼­ºÎÅÍ Å½»ö)
+	static int search2(int data[], int begin, int end, int target) {
+		
+		if(begin>end)
+			return -1;
+		else if(data[end]==target)
+			return end;
+		else
+			return search(data, begin, end-1, target);
+	}
+	
+	//¼øÂ÷Å½»ö3 (¹İÀ¸·Î ³ª´©¾î¼­ Å½»ö)
+	static int search3(int data[], int begin, int end, int target) {
+		
+		if(begin>end)
+			return -1;
+		else{
+			int middle = (begin + end)/2;
+			
+			if(data[middle]==target)
+				return middle;
+			int index = search(data, begin, middle-1, target);
+			if(index != -1)
+				return index;
+			else
+				return search(data, begin, middle+1, target);
+		}
+	}
+	
+	
 	
 	public static void main(String[] args) {
 		
