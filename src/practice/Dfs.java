@@ -1,8 +1,8 @@
-package recursion;
+package practice;
 
 import java.util.Scanner;
 
-public class AAA {
+public class Dfs {
 	
 	static int vertex;
 	static int edge;
