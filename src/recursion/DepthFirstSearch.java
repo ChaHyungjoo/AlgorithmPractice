@@ -39,7 +39,7 @@ public class DepthFirstSearch {
 			int n = scanner.nextInt();
 			int m = scanner.nextInt();
 			
-			adjacencyMatrix[n-1][m-1] = 1;		//간선을 인접행렬에 초기화 시켜줌
+			adjacencyMatrix[n-1][m-1] = adjacencyMatrix[m-1][n-1] = 1;		//간선을 인접행렬에 초기화 시켜줌
 		}
 		
 		dfs(1);
