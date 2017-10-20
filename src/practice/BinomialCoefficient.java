@@ -10,8 +10,8 @@ public class BinomialCoefficient {
 	//동적계획법으로 구현
 	public static int combinationDp(int n, int r) {
 		
-		for(int i=2; i<=n; i++)
-			for(int j=0; j<=r && j<=i; j++) {
+		for(int i=0; i<=n; i++)
+			for(int j=0; (j<=r && j<=i) ; j++) {
 				if(i == j || j ==0) {
 					dp[i][j] = 1;
 				}else {
@@ -51,13 +51,12 @@ public class BinomialCoefficient {
 		//System.out.println(combination(n, r));
 		
 		//동적계획법 사용
-		dp[1][0] = dp[1][1] = 1;
+		combinationDp(n, r);
 		System.out.println(combinationDp(n, r));
-		
 		
 		for(int i=0; i<6; i++) {
 			for(int j=0; j<6; j++)
-				System.out.print(dp[i][j]+" ");
+				System.out.print(dp[i][j]+"\t");
 			System.out.println("");
 		}
 
