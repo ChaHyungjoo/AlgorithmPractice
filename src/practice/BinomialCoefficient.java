@@ -32,10 +32,7 @@ public class BinomialCoefficient {
 				System.out.print(dp[i][j]+"  ");
 			System.out.println("");
 		}
-		
 
 	}
-
-	
 		
 }
