@@ -1,4 +1,4 @@
-package practice;
+package solution;
 
 public class BinaryGap {
 	

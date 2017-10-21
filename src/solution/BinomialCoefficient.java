@@ -1,4 +1,4 @@
-package practice;
+package solution;
 
 import java.util.Scanner;
 
@@ -51,7 +51,7 @@ public class BinomialCoefficient {
 		//System.out.println(combination(n, r));
 		
 		//동적계획법 사용
-		combinationDp(n, r);
+		//combinationDp(n, r);
 		System.out.println(combinationDp(n, r));
 		
 		for(int i=0; i<6; i++) {
