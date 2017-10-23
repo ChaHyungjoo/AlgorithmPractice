@@ -1,6 +1,6 @@
-package practice;
+package solution;
 
-public class fefw {
+public class KakaoTrasureMap {
 	
 	static String[][] map = new String[5][5];
 	

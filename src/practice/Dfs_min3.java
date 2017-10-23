@@ -46,6 +46,7 @@ public class Dfs_min3 {
 		map = new int[map_size+1][map_size+1];
 		min = map_size*map_size;
 		
+		//미로 만들기
 		for(int i=0; i<map_size; i++)
 			for(int j=0; j<map_size; j++)
 				map[i][j] = scanner.nextInt();
