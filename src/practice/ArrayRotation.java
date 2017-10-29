@@ -1,13 +1,12 @@
 package practice;
 
 public class ArrayRotation {
-
-	public static void main(String[] args) {
-		
-		int[] a = {1,2,3,4,5,6,7,8};
-		int[] temps = new int[9];
-		
-		/*for(int i=0; i<8; i++) {
+	
+	static int[] a = {1,2,3,4};
+	static int[] temps = new int[9];
+	
+	public static void sige(int[] a, int n) {
+		for(int i=0; i<n; i++) {
 			for(int j=0; j<a.length; j++) {
 				int temp = a[a.length-1];
 				
@@ -16,9 +15,12 @@ public class ArrayRotation {
 				
 				a[0] = temp;
 			}
-		}*/
+		}
 		
-		for(int i=0; i<3; i++) {
+	}
+	
+	public static void bansige(int[] a, int n) {
+		for(int i=0; i<n; i++) {
 			for(int j=a.length-1; j>=0; j--) {
 				int temp = a[0];
 				temps[a.length] = temp;
@@ -28,6 +30,13 @@ public class ArrayRotation {
 			}
 		}
 		
+	}
+
+	public static void main(String[] args) {
+		
+		sige(a, 1);
+		
+		//bansige(a, 3);
 		
 		for(int i=0; i<a.length; i++)
 			System.out.print(a[i]+" ");
